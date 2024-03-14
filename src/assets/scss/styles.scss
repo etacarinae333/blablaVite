@@ -310,14 +310,21 @@ section#main {
             align-items: flex-end;
             align-content: flex-end;
         }
+        &__item {
+            min-width: 100%;
+        }
         .image {
+            max-width: 45%;
             display: flex;
+            position: absolute;
+            left: 20px;
+            bottom: 0;
         }
         .text {
+            width: 630px;
             z-index: 1;
             margin-left: auto;
             margin-right: 40px;
-            width: 600px;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -335,7 +342,14 @@ section#main {
                 font-weight: 300;
                 span {
                     display: block;
-                    text-align: right;
+                    margin-left: 117px;
+                }
+            }
+            h3 {
+                font-size: 58px;
+                font-weight: 300;
+                b {
+                    font-weight: 500;
                 }
             }
             .btn {
@@ -349,14 +363,11 @@ section#main {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 0;
+            bottom: 30px;
             .pagination {
                 width: auto;
                 display: flex;
-                position: absolute;
-                bottom: 30px;
-                right: 0;
-                left: initial;
+                margin-left: auto;
             }
         }
     }
@@ -364,14 +375,18 @@ section#main {
 @include xxl {
     section#main {
         .main-banner .text {
-            width: auto;
             margin-right: 0;
         }
     }
 }
 @include xl {
-    section#main .main-banner .text .title {
-        font-size: 70px;
+    section#main .main-banner .text {
+        .title {
+            font-size: 70px;
+        }
+        h3 {
+            font-size: 48px;
+        }
     }
 }
 @include lg {
@@ -379,13 +394,16 @@ section#main {
         padding-top: 90px;
         max-height: 800px;
         min-height: 500px;
+        .main-banner .text {
+            justify-content: start;
+            max-width: 560px;
+        }
     }
 }
 @include md {
     section#main {
-        max-height: initial;
-        min-height: initial;
-        height: initial;
+        max-height: 930px;
+        min-height: 630px;
         .main-banner {
             .container {
                 flex-direction: column;
@@ -396,13 +414,24 @@ section#main {
             .image {
                 order: 1;
                 margin-left: -66px;
+                width: 100%;
+                max-width: 100%;
             }
             .text {
+                max-width: 330px;
                 margin: 0 auto;
                 margin-bottom: 20px;
                 justify-content: flex-start;
                 .title {
+                    margin-top: 4px;
                     font-size: 48px;
+                    line-height: 50px;
+                    span {
+                        margin-left: 50px;
+                    }
+                }
+                h3 {
+                    font-size: 28px;
                 }
             }
             .btn {
@@ -412,6 +441,29 @@ section#main {
                 width: calc(100% - 32px);
                 .circles {
                     display: none;
+                }
+            }
+            &__pagination {
+                top: 140px;
+                .pagination {
+                    margin-left: auto;
+                    position: static;
+                }
+                &.container {
+                    overflow: initial;
+                }
+            }
+        }
+    }
+}
+@include sm {
+    section#main {
+        max-height: 930px;
+        min-height: 750px;
+        .main-banner {
+            .text {
+                max-width: 100%;
+                h3 {
                 }
             }
         }
