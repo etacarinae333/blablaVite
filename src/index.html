@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BabaLab</title>
+
+        <script>
+            document.ondragstart = noselect;
+            document.onselectstart = noselect;
+            document.oncontextmenu = noselect;
+            function noselect() {
+                return false;
+            }
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/scss/styles.scss" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <a href="/" class="header__logo">
+                    <img src="assets/img/logo.svg" alt="BabaLab" />
+                </a>
+                <div class="header__burger"></div>
+                <div class="header__main">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="with-dropdown services">
+                                <a href="#">Услуги</a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Лазерная эпиляция</a>
+                                        </li>
+                                        <li><a href="#">Электроопеляция</a></li>
+                                        <li><a href="#">Шугаринг</a></li>
+                                        <li>
+                                            <a href="#">Восковая депиляция</a>
+                                        </li>
+                                        <li><a href="#">Массаж ICOONE</a></li>
+                                        <li>
+                                            <a href="#">Мужская депиляция</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="lang">
+                        <div class="current">RU</div>
+                        <ul class="lang__list">
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">PL</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn contact-modal-btn">
+                        Записаться на процедуру
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="main">
+                <div class="main-banner swiper">
+                    <div class="swiper-wrapper">
+                        <div class="main-banner__item">
+                            <div class="container">
+                                <div class="image">
+                                    <img
+                                        src="./assets/img/main-banner1.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="text">
+                                    <div class="label">
+                                        центр депиляции babalab
+                                    </div>
+                                    <h2 class="title">
+                                        Почувствуй <span>гладкость</span>
+                                    </h2>
+                                    <div class="btn lg contact-modal-btn">
+                                        <span class="circles"></span>
+                                        Записаться на процедуру
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-banner__item">
+                            <div class="container">
+                                <div class="image">
+                                    <img
+                                        src="./assets/img/main-banner1.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="text">
+                                    <div class="label">
+                                        центр депиляции babalab
+                                    </div>
+                                    <h2 class="title">
+                                        Почувствуй <span>гладкость</span>
+                                    </h2>
+                                    <div class="btn lg contact-modal-btn">
+                                        <span class="circles"></span>
+                                        Записаться на процедуру
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-banner__item">
+                            <div class="container">
+                                <div class="image">
+                                    <img
+                                        src="./assets/img/main-banner1.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="text">
+                                    <div class="label">
+                                        центр депиляции babalab
+                                    </div>
+                                    <h2 class="title">
+                                        Почувствуй <span>гладкость</span>
+                                    </h2>
+                                    <div class="btn lg contact-modal-btn">
+                                        <span class="circles"></span>
+                                        Записаться на процедуру
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container main-banner__pagination">
+                        <div
+                            class="pagination swiper-pagination-horizontal"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+            <section id="services">
+                <div class="container">
+                    <h2>Услуги</h2>
+                    <div class="services-list">
+                        <div class="services-list__item">
+                            <div class="image">
+                                <img
+                                    style="object-position: 41% center"
+                                    src="./assets/img/services1.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="text">
+                                <h4>Лазерная эпиляция</h4>
+                                <div class="btn-arr"></div>
+                            </div>
+                        </div>
+                        <div class="services-list__item active">
+                            <div class="image">
+                                <img src="./assets/img/services2.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>электроэпиляция</h4>
+                                <div class="btn-arr"></div>
+                            </div>
+                        </div>
+                        <div class="services-list__item">
+                            <div class="image">
+                                <img src="./assets/img/services3.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>шугаринг</h4>
+                                <div class="btn-arr"></div>
+                            </div>
+                        </div>
+                        <div class="services-list__item">
+                            <div class="image">
+                                <img src="./assets/img/services4.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>восковая депиляция</h4>
+                                <div class="btn-arr"></div>
+                            </div>
+                        </div>
+                        <div class="services-list__item">
+                            <div class="image">
+                                <img src="./assets/img/services5.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>массаж icoonE</h4>
+                                <div class="btn-arr"></div>
+                            </div>
+                        </div>
+                        <div class="services-list__item">
+                            <div class="image">
+                                <img src="./assets/img/services6.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>мужская депиляция</h4>
+                                <div class="btn-arr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about-us">
+                <div class="container">
+                    <h2>О нас</h2>
+                    <div class="about-us-list">
+                        <div class="about-us-list__item">
+                            <h3><b>7</b>лет</h3>
+                            <ul>
+                                <li>2017</li>
+                                <li>2018</li>
+                                <li>2019</li>
+                                <li>2020</li>
+                                <li>2021</li>
+                                <li>2022</li>
+                                <li>2023</li>
+                                <li>2024</li>
+                            </ul>
+                        </div>
+                        <div class="about-us-list__item">
+                            <h3><b>3</b>города</h3>
+                            <ul>
+                                <li>Краков</li>
+                                <li>Вроцлав</li>
+                                <li>Варшава</li>
+                            </ul>
+                        </div>
+                        <div class="about-us-list__item">
+                            <h3><b>6</b>салонов</h3>
+                            <ul>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>4</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="about-us-list__item about-us-list__item_link"
+                        >
+                            <div class="btn white">Подробнее о нас</div>
+                            <div class="btn-arr white"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonials">
+                <div class="container">
+                    <h2>
+                        Клиенты
+                        <div>о нашей работе</div>
+                    </h2>
+                    <div class="content">
+                        <div class="testimonials-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="testimonials-slider__item">
+                                    <div class="text">
+                                        To centrum odwiedzam regularnie od dwóch
+                                        lat. Byłam już chyba u każdej mistrzyni
+                                        w tym miejscu i nigdy się nie zawiodłam.
+                                        Pracują tu prawdziwe profesjonalistki, a
+                                        ja zawsze czuję się tu zaopiekowana,
+                                        ważna i wychodzę zadowolona. Polecam na
+                                        100% !
+                                    </div>
+                                    <div class="user">
+                                        <div class="user__photo">
+                                            <img
+                                                src="./assets/img/Group 417.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="user__info">
+                                            <div class="name">
+                                                Gabriela Ganana
+                                            </div>
+                                            <div class="address">
+                                                Giełdowa 4E - U4, Warszawa
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials-slider__item">
+                                    <div class="text">
+                                        To centrum odwiedzam regularnie od dwóch
+                                        lat. Byłam już chyba u każdej mistrzyni
+                                        w tym miejscu i nigdy się nie zawiodłam.
+                                        Pracują tu prawdziwe profesjonalistki, a
+                                        ja zawsze czuję się tu zaopiekowana,
+                                        ważna i wychodzę zadowolona. Polecam na
+                                        100% !
+                                    </div>
+                                    <div class="user">
+                                        <div class="user__photo">
+                                            <img
+                                                src="./assets/img/Group 417.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="user__info">
+                                            <div class="name">
+                                                Gabriela Ganana
+                                            </div>
+                                            <div class="address">
+                                                Giełdowa 4E - U4, Warszawa
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials-slider__item">
+                                    <div class="text">
+                                        To centrum odwiedzam regularnie od dwóch
+                                        lat. Byłam już chyba u każdej mistrzyni
+                                        w tym miejscu i nigdy się nie zawiodłam.
+                                        Pracują tu prawdziwe profesjonalistki, a
+                                        ja zawsze czuję się tu zaopiekowana,
+                                        ważna i wychodzę zadowolona. Polecam na
+                                        100% !
+                                    </div>
+                                    <div class="user">
+                                        <div class="user__photo">
+                                            <img
+                                                src="./assets/img/Group 417.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="user__info">
+                                            <div class="name">
+                                                Gabriela Ganana
+                                            </div>
+                                            <div class="address">
+                                                Giełdowa 4E - U4, Warszawa
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials-slider__item">
+                                    <div class="text">
+                                        Procedura byta znacznie mniej bolesna
+                                        niz sie spodziewatam. Personel byt
+                                        bardzo profesjonalny i troszczyt sie o
+                                        moje wygode podczas catego zabiegu. Na
+                                        pewno wróce i goraco polecam wszystkim,
+                                        którzy szukają skutecznej i delikatnej
+                                        motody depilacji!
+                                    </div>
+                                    <div class="user">
+                                        <div class="user__photo">
+                                            <img
+                                                src="./assets/img/Group 417.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="user__info">
+                                            <div class="name">Justyna P.</div>
+                                            <div class="address">
+                                                Masarska 8, Kraków
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials-slider__item">
+                                    <div class="text">
+                                        Procedura byta znacznie mniej bolesna
+                                        niz sie spodziewatam. Personel byt
+                                        bardzo profesjonalny i troszczyt sie o
+                                        moje wygode podczas catego zabiegu. Na
+                                        pewno wróce i goraco polecam wszystkim,
+                                        którzy szukają skutecznej i delikatnej
+                                        motody depilacji!
+                                    </div>
+                                    <div class="user">
+                                        <div class="user__photo">
+                                            <img
+                                                src="./assets/img/Group 417.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="user__info">
+                                            <div class="name">Justyna P.</div>
+                                            <div class="address">
+                                                Masarska 8, Kraków
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials-slider__pagination"></div>
+                        <div class="testimonials-slider__scrollbar"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="addresses">
+                <div class="container">
+                    <h2>Салоны</h2>
+                    <div class="addresses">
+                        <div class="addresses__tabs">
+                            <div
+                                class="addresses__tabs__item active"
+                                data-slide="0"
+                            >
+                                Варшава
+                            </div>
+                            <div class="addresses__tabs__item" data-slide="1">
+                                Краков
+                            </div>
+                            <div class="addresses__tabs__item" data-slide="2">
+                                Вроцлав
+                            </div>
+
+                            <div class="addresses__tabs__subtabs swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="addresses__tabs__subtabs__item">
+                                        <div
+                                            class="street active"
+                                            data-slide="0"
+                                            data-parent-slide="0"
+                                        >
+                                            Wola
+                                        </div>
+                                        <div
+                                            class="street"
+                                            data-slide="1"
+                                            data-parent-slide="0"
+                                        >
+                                            Mokotów
+                                        </div>
+                                        <div
+                                            class="street"
+                                            data-slide="2"
+                                            data-parent-slide="0"
+                                        >
+                                            Ursynów
+                                        </div>
+                                        <div
+                                            class="street"
+                                            data-slide="3"
+                                            data-parent-slide="0"
+                                        >
+                                            Wilanów
+                                        </div>
+                                    </div>
+                                    <div class="addresses__tabs__subtabs__item">
+                                        <div
+                                            class="street"
+                                            data-slide="4"
+                                            data-parent-slide="1"
+                                        >
+                                            Śródmieście
+                                        </div>
+                                    </div>
+                                    <div class="addresses__tabs__subtabs__item">
+                                        <div
+                                            class="street"
+                                            data-slide="5"
+                                            data-parent-slide="2"
+                                        >
+                                            Krzyki
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="corner corner-top-1"></div>
+                        </div>
+                        <div class="addresses__list swiper">
+                            <div class="swiper-wrapper">
+                                <div class="addresses__list__item">
+                                    <b>Wola:</b>
+                                    <p>
+                                        ul. Giełdowa 4E, U4<br />
+                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                                        <b>Вс:</b> 10:00 – 20:00
+                                    </p>
+                                </div>
+                                <div class="addresses__list__item">
+                                    <b>Wola2:</b>
+                                    <p>
+                                        ul. Giełdowa 4E, U4<br />
+                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                                        <b>Вс:</b> 10:00 – 20:00
+                                    </p>
+                                </div>
+                                <div class="addresses__list__item">
+                                    <b>Wola3:</b>
+                                    <p>
+                                        ul. Giełdowa 4E, U4<br />
+                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                                        <b>Вс:</b> 10:00 – 20:00
+                                    </p>
+                                </div>
+                                <div class="addresses__list__item">
+                                    <b>Wola4:</b>
+                                    <p>
+                                        ul. Giełdowa 4E, U4<br />
+                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                                        <b>Вс:</b> 10:00 – 20:00
+                                    </p>
+                                </div>
+                                <div class="addresses__list__item">
+                                    <b>Wola5:</b>
+                                    <p>
+                                        ul. Giełdowa 4E, U4<br />
+                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                                        <b>Вс:</b> 10:00 – 20:00
+                                    </p>
+                                </div>
+                                <div class="addresses__list__item">
+                                    <b>Wola6:</b>
+                                    <p>
+                                        ul. Giełdowa 4E, U4<br />
+                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                                        <b>Вс:</b> 10:00 – 20:00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addresses__list__pagination">
+                            <div class="pagination-prev btn-arr white"></div>
+                            <div class="pagination"></div>
+                            <div class="pagination-next btn-arr white"></div>
+                        </div>
+                        <div class="addresses__pictures swiper">
+                            <div class="swiper-wrapper">
+                                <div class="addresses__pictures__item">
+                                    <img
+                                        src="assets/img/Subtract (5).png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="addresses__pictures__item">
+                                    <img
+                                        src="assets/img/Subtract (4).png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="addresses__pictures__item">
+                                    <img
+                                        src="assets/img/Subtract (3).png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="addresses__pictures__item">
+                                    <img
+                                        src="assets/img/Subtract (2).png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="addresses__pictures__item">
+                                    <img
+                                        src="assets/img/Subtract (1).png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="addresses__pictures__item">
+                                    <img src="assets/img/Subtract.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="corner corner-top-2"></div>
+                            <div class="corner corner-bottom-1"></div>
+                            <div class="corner corner-bottom-2"></div>
+                        </div>
+                        <div class="booksy-btn">
+                            <div class="btn">
+                                <img src="assets/img/booksy.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contacts">
+                <div class="container">
+                    <div class="contacts-info">
+                        <h2>Вы всегда можете связаться с нами</h2>
+                        <div class="desc">
+                            чтобы уточнить информацию о работе салона,<br />
+                            записаться на услугу или получить дополнительные<br />
+                            консультации
+                        </div>
+                        <ul class="contacts">
+                            <li class="contacts__item">
+                                <b>телефон:</b>
+                                <a href="tel:+48730162614" target="_blank"
+                                    >+48 730 162 614</a
+                                >
+                            </li>
+                            <li class="contacts__item">
+                                <b>email:</b>
+                                <a
+                                    href="mailto:babalab.pl@gmail.com"
+                                    target="_blank"
+                                    >babalab.pl@gmail.com</a
+                                >
+                            </li>
+                            <li class="contacts__item">
+                                <b>instagram:</b>
+                                <a
+                                    href="https://instagram.com/babalab.pl"
+                                    target="_blank"
+                                    >@babalab.pl</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="contacts-form">
+                        <label class="input-wrap">
+                            <span class="label">Имя *</span>
+                            <input type="text" required placeholder="Имя" />
+                        </label>
+                        <label class="input-wrap">
+                            <span class="label">Email *</span>
+                            <input type="email" required />
+                        </label>
+                        <label class="input-wrap">
+                            <span class="label">Телефон *</span>
+                            <input type="tel" required />
+                        </label>
+                        <label class="input-wrap">
+                            <span class="label">Салон *</span>
+                            <select class="select" name="salon">
+                                <option value="Postępu 27, Warszawa">
+                                    Postępu 27, Warszawa
+                                </option>
+                                <option value="Giełdowa 4E, Warszawa">
+                                    Giełdowa 4E, Warszawa
+                                </option>
+                                <option value="Al. KEN 36, Warszawa">
+                                    Al. KEN 36, Warszawa
+                                </option>
+                                <option value="Herbu Szreniawa 11, Warszawa">
+                                    Herbu Szreniawa 11, Warszawa
+                                </option>
+                                <option value="Masarska 8, Kraków">
+                                    Masarska 8, Kraków
+                                </option>
+                                <option value="Gwiaździsta 18, Wrocław">
+                                    Gwiaździsta 18, Wrocław
+                                </option>
+                            </select>
+                        </label>
+                        <label class="input-wrap">
+                            <span class="label">Сообщение *</span>
+                            <textarea
+                                required
+                                placeholder="Написать сообщение..."
+                            ></textarea>
+                        </label>
+                        <label class="confirmation">
+                            <input type="checkbox" required />
+                            <span class="checkbox"></span>You agree to our
+                            friendly&nbsp;
+                            <a class="link" href="#">privacy policy</a>
+                        </label>
+                        <button class="btn lg">Написать</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="left">
+                    <div class="row">
+                        <a href="/" class="logo"
+                            ><img src="assets/img/logo.svg" alt=""
+                        /></a>
+                    </div>
+                    <div class="menu">
+                        <div class="title">Меню:</div>
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                        <div class="title">Услуги:</div>
+                        <ul>
+                            <li>
+                                <a href="#">Лазерная эпиляция</a>
+                            </li>
+                            <li>
+                                <a href="#">Электроэпиляция</a>
+                            </li>
+                            <li>
+                                <a href="#">Шугаринг</a>
+                            </li>
+                            <li class="mobile">
+                                <a href="#">Восковая депиляция</a>
+                            </li>
+                            <li class="mobile">
+                                <a href="#">Мужская депиляция</a>
+                            </li>
+                            <li class="mobile">
+                                <a href="#">Массаж ICOONE</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu no-mobile">
+                        <div class="title">&nbsp;</div>
+                        <ul>
+                            <li>
+                                <a href="#">Восковая депиляция</a>
+                            </li>
+                            <li>
+                                <a href="#">Мужская депиляция</a>
+                            </li>
+                            <li>
+                                <a href="#">Массаж ICOONE</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu contacts">
+                        <div class="title">Контакты:</div>
+                        <ul>
+                            <li>
+                                <a href="tel:+48730162614" target="_blank">
+                                    <img src="assets/img/Phone.svg" alt="" />
+                                    +48 730 162 614</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:babalab.pl@gmail.com"
+                                    target="_blank"
+                                >
+                                    <img src="assets/img/Envelope.svg" alt="" />
+                                    babalab.pl@gmail.com</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://instagram.com/babalab.pl"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="assets/img/InstagramLogo.svg"
+                                        alt=""
+                                    />
+                                    babalab.pl
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image">
+                        <img src="assets/img/circle-photo.png" alt="" />
+                    </div>
+                    <div class="name">Екатерина</div>
+                    <p>основательница babalab</p>
+                    <p class="question">Остались вопросы?</p>
+                    <div class="o-btn contact-me-btn">Напиши мне</div>
+                </div>
+                <div class="bottom">
+                    <ul>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Договор оферты</a></li>
+                        <li class="center">
+                            <a href="#">Разработка dechnich web-production</a>
+                        </li>
+                        <li><a href="#">babalab.pl</a></li>
+                        <li>All rights reserved © 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="modal contact-me">
+            <div class="close"></div>
+            <div class="image">
+                <!-- <img src="assets/img/s.png" alt="" /> -->
+                <picture>
+                    <source
+                        srcset="assets/img/contact-me-mobile.png"
+                        media="(max-width: 768px)"
+                    />
+                    <img src="assets/img/s.png" alt="" />
+                </picture>
+            </div>
+            <form class="contacts-form">
+                <label class="input-wrap">
+                    <span class="label">Имя *</span>
+                    <input type="text" required placeholder="Имя" />
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Email *</span>
+                    <input type="email" required />
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Телефон *</span>
+                    <input type="tel" required />
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Салон *</span>
+                    <select class="select" name="salon">
+                        <option value="Postępu 27, Warszawa">
+                            Postępu 27, Warszawa
+                        </option>
+                        <option value="Giełdowa 4E, Warszawa">
+                            Giełdowa 4E, Warszawa
+                        </option>
+                        <option value="Al. KEN 36, Warszawa">
+                            Al. KEN 36, Warszawa
+                        </option>
+                        <option value="Herbu Szreniawa 11, Warszawa">
+                            Herbu Szreniawa 11, Warszawa
+                        </option>
+                        <option value="Masarska 8, Kraków">
+                            Masarska 8, Kraków
+                        </option>
+                        <option value="Gwiaździsta 18, Wrocław">
+                            Gwiaździsta 18, Wrocław
+                        </option>
+                    </select>
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Сообщение *</span>
+                    <textarea
+                        required
+                        placeholder="Написать сообщение..."
+                    ></textarea>
+                </label>
+                <label class="confirmation">
+                    <input type="checkbox" required />
+                    <span class="checkbox"></span>
+                    You agree to our friendly&nbsp;
+                    <a class="link" href="#">privacy policy</a>
+                </label>
+                <button class="btn lg">Написать</button>
+            </form>
+        </div>
+        <div class="modal contact-modal">
+            <div class="close"></div>
+            <div class="image">
+                <img src="assets/img/popup2.png" alt="" />
+            </div>
+            <form class="contacts-form">
+                <label class="input-wrap">
+                    <span class="label">Имя *</span>
+                    <input type="text" required placeholder="Имя" />
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Email *</span>
+                    <input type="email" required />
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Телефон *</span>
+                    <input type="tel" required />
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Салон *</span>
+                    <select class="select" name="salon">
+                        <option value="Postępu 27, Warszawa">
+                            Postępu 27, Warszawa
+                        </option>
+                        <option value="Giełdowa 4E, Warszawa">
+                            Giełdowa 4E, Warszawa
+                        </option>
+                        <option value="Al. KEN 36, Warszawa">
+                            Al. KEN 36, Warszawa
+                        </option>
+                        <option value="Herbu Szreniawa 11, Warszawa">
+                            Herbu Szreniawa 11, Warszawa
+                        </option>
+                        <option value="Masarska 8, Kraków">
+                            Masarska 8, Kraków
+                        </option>
+                        <option value="Gwiaździsta 18, Wrocław">
+                            Gwiaździsta 18, Wrocław
+                        </option>
+                    </select>
+                </label>
+                <label class="input-wrap">
+                    <span class="label">Сообщение *</span>
+                    <textarea
+                        required
+                        placeholder="Написать сообщение..."
+                    ></textarea>
+                </label>
+                <label class="confirmation">
+                    <input type="checkbox" required />
+                    <span class="checkbox"></span>
+                    You agree to our friendly&nbsp;
+                    <a class="link" href="#">privacy policy</a>
+                </label>
+                <button class="btn lg">Написать</button>
+            </form>
+        </div>
+        <div class="overlay"></div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script> -->
+        <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+        <script type="module" src="assets/js/scripts.js"></script>
+    </body>
+</html>
