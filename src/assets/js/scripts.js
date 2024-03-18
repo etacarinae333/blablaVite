@@ -1,5 +1,14 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
+const setVh = () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+};
+setVh();
+window.addEventListener("resize", () => {
+    setVh();
+});
+
 const addEventListenerAll = (selector, event, handler) => {
     const elems = document.querySelectorAll(selector);
     elems.forEach((item) => {

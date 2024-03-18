@@ -294,7 +294,7 @@ html {
 section#main {
     padding-top: 80px;
     background-color: $primary_color;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     max-height: 1000px;
     min-height: 800px;
     .container {
