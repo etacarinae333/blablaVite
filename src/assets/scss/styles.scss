@@ -456,7 +456,7 @@ section#main {
 @include sm {
     section#main {
         max-height: initial;
-        min-height: 175vw;
+        min-height: initial;
         .main-banner {
             .text {
                 max-width: 100%;
