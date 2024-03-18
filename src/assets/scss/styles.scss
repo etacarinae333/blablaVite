@@ -1823,3 +1823,11 @@ footer {
         visibility: visible;
     }
 }
+
+@include sm {
+    body {
+        position: relative;
+        max-width: 320px;
+        zoom: var(--zoom);
+    }
+}

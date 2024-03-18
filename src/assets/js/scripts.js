@@ -1,12 +1,20 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-const setVh = () => {
-    let vh = window.innerHeight * 0.01;
+const setCssVariables = () => {
+    const vh = window.innerHeight * 0.01;
+    const vw = window.innerWidth * 0.01;
+    const zoom = window.innerWidth / 320;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty("--zoom", `${zoom}`);
+    document.documentElement.style.setProperty("--vw", `${vw}px`);
+
+    // document
+    //     .querySelector('meta[name="viewport"]')
+    //     .setAttribute("content", `width=device-width, initial-scale=${zoom}`);
 };
-setVh();
+setCssVariables();
 window.addEventListener("resize", () => {
-    setVh();
+    setCssVariables();
 });
 
 const addEventListenerAll = (selector, event, handler) => {
