@@ -10,8 +10,9 @@ const addEventListenerAll = (selector, event, handler) => {
 const mainBanner = new Swiper(".main-banner", {
     loop: true,
     // autoplay: {
-    //     delay: 10000,
+    //     delay: 5000,
     // },
+    speed: 700,
     slideClass: "main-banner__item",
     slidesPerView: 1,
     pagination: {
@@ -32,7 +33,7 @@ addEventListenerAll(".services-list__item", "mouseover", (e) => {
 const testimonials = new Swiper(".testimonials-slider", {
     loop: true,
     slideClass: "testimonials-slider__item",
-    scrollbar: { enabled: false },
+    scrollbar: { enabled: false, hide: true },
     pagination: {
         enabled: true,
         el: ".testimonials-slider__pagination",
@@ -52,9 +53,11 @@ const testimonials = new Swiper(".testimonials-slider", {
                 draggable: true,
                 snapOnRelease: true,
                 dragSize: "auto",
+                hide: false,
             },
             pagination: {
                 enabled: false,
+                hide: true,
             },
         },
     },
