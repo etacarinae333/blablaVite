@@ -60,8 +60,9 @@
                     <div class="lang">
                         <div class="current">RU</div>
                         <ul class="lang__list">
-                            <li><a href="#">EN</a></li>
                             <li><a href="#">PL</a></li>
+                            <li><a href="#">UA</a></li>
+                            <li><a href="#">EN</a></li>
                         </ul>
                     </div>
                     <div class="btn contact-modal-btn">Записаться</div>
@@ -70,19 +71,16 @@
         </header>
         <main>
             <section id="main">
-                <div class="main-banner swiper">
-                    <div class="swiper-wrapper">
-                        <div class="main-banner__item">
-                            <div class="container">
-                                <div class="image">
-                                    <img
-                                        src="./assets/img/main-banner1.png"
-                                        alt=""
-                                    />
-                                </div>
+                <div class="container">
+                    <div class="main-banner swiper">
+                        <div class="image">
+                            <img src="./assets/img/main-banner1.png" alt="" />
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="main-banner__item">
                                 <div class="text">
                                     <div class="label">
-                                        центр депиляции babalab
+                                        центр депиляции <span>babalab</span>
                                     </div>
                                     <h1 class="title">
                                         Почувствуй <span>гладкость</span>
@@ -95,18 +93,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="main-banner__item">
-                            <div class="container">
-                                <div class="image">
-                                    <img
-                                        src="./assets/img/main-banner1.png"
-                                        alt=""
-                                    />
-                                </div>
+                            <div class="main-banner__item">
                                 <div class="text">
                                     <div class="label">
-                                        центр депиляции babalab
+                                        центр депиляции <span>babalab</span>
                                     </div>
                                     <h3>
                                         Хочешь <b>скидку 50%</b> на первый визит
@@ -120,18 +110,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="main-banner__item">
-                            <div class="container">
-                                <div class="image">
-                                    <img
-                                        src="./assets/img/main-banner1.png"
-                                        alt=""
-                                    />
-                                </div>
+                            <div class="main-banner__item">
                                 <div class="text">
                                     <div class="label">
-                                        центр депиляции babalab
+                                        центр депиляции <span>babalab</span>
                                     </div>
                                     <h3>
                                         А может хочешь
@@ -147,9 +129,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container main-banner__pagination">
-                        <div class="pagination"></div>
+                        <div class="container main-banner__pagination">
+                            <div class="pagination"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -251,12 +233,13 @@
                                 <li>4</li>
                             </ul>
                         </div>
-                        <div
+                        <a
+                            href="#"
                             class="about-us-list__item about-us-list__item_link"
                         >
                             <div class="btn white">Подробнее о нас</div>
-                            <div class="btn-arr white"></div>
-                        </div>
+                            <div class="btn-arr"></div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -585,6 +568,52 @@
                                 <img src="assets/img/booksy.svg" alt="" />
                             </div>
                         </div>
+                        <!-- <div class="booksy-btn">
+                            <div class="swiper-wrapper">
+                                <div class="btn">
+                                    <script
+                                        type="text/javascript"
+                                        src="https://booksy.com/widget/code.js?id=233973&country=pl&lang=en"
+                                    ></script>
+                                    <img src="assets/img/booksy.svg" alt="" />
+                                </div>
+                                <div class="btn">
+                                    <script
+                                        type="text/javascript"
+                                        src="https://booksy.com/widget/code.js?id=233973&country=pl&lang=en"
+                                    ></script>
+                                    <img src="assets/img/booksy.svg" alt="" />
+                                </div>
+                                <div class="btn">
+                                    <script
+                                        type="text/javascript"
+                                        src="https://booksy.com/widget/code.js?id=233973&country=pl&lang=en"
+                                    ></script>
+                                    <img src="assets/img/booksy.svg" alt="" />
+                                </div>
+                                <div class="btn">
+                                    <script
+                                        type="text/javascript"
+                                        src="https://booksy.com/widget/code.js?id=233973&country=pl&lang=en"
+                                    ></script>
+                                    <img src="assets/img/booksy.svg" alt="" />
+                                </div>
+                                <div class="btn">
+                                    <script
+                                        type="text/javascript"
+                                        src="https://booksy.com/widget/code.js?id=233973&country=pl&lang=en"
+                                    ></script>
+                                    <img src="assets/img/booksy.svg" alt="" />
+                                </div>
+                                <div class="btn">
+                                    <script
+                                        type="text/javascript"
+                                        src="https://booksy.com/widget/code.js?id=233973&country=pl&lang=en"
+                                    ></script>
+                                    <img src="assets/img/booksy.svg" alt="" />
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -631,30 +660,42 @@
                             <span class="label">Email *</span>
                             <input type="email" required />
                         </label>
-                        <label class="input-wrap">
+                        <label class="input-wrap phone">
+                            <select class="countryCodes"></select>
                             <span class="label">Телефон *</span>
                             <input type="tel" required />
                         </label>
-                        <label class="input-wrap">
-                            <span class="label">Салон *</span>
-                            <select class="select" name="salon">
-                                <option value="Postępu 27, Warszawa">
-                                    Postępu 27, Warszawa
+                        <label class="input-wrap select-wrap">
+                            <span class="label">Город *</span>
+                            <select
+                                class="select"
+                                name="city"
+                                placeholder="Выбрать город"
+                            >
+                                <option value="Варшава">Варшава</option>
+                                <option value="Варшава">Краков</option>
+                                <option value="Варшава">Вроцлав</option>
+                            </select>
+                        </label>
+                        <label class="input-wrap select-wrap">
+                            <span class="label">Усуга *</span>
+                            <select
+                                class="select"
+                                name="service"
+                                aria-placeholder="Выбрать услугу"
+                            >
+                                <option value="Лазерная эпиляция">
+                                    Лазерная эпиляция
                                 </option>
-                                <option value="Giełdowa 4E, Warszawa">
-                                    Giełdowa 4E, Warszawa
+                                <option value="Электроэпиляция">
+                                    Электроэпиляция
                                 </option>
-                                <option value="Al. KEN 36, Warszawa">
-                                    Al. KEN 36, Warszawa
+                                <option value="Шугаринг">Шугаринг</option>
+                                <option value="Восковая депиляция">
+                                    Восковая депиляция
                                 </option>
-                                <option value="Herbu Szreniawa 11, Warszawa">
-                                    Herbu Szreniawa 11, Warszawa
-                                </option>
-                                <option value="Masarska 8, Kraków">
-                                    Masarska 8, Kraków
-                                </option>
-                                <option value="Gwiaździsta 18, Wrocław">
-                                    Gwiaździsta 18, Wrocław
+                                <option value="Массаж ICOONE">
+                                    Массаж ICOONE
                                 </option>
                             </select>
                         </label>
@@ -787,125 +828,131 @@
             </div>
         </footer>
         <div class="modal contact-me">
-            <div class="close"></div>
-            <div class="image">
-                <!-- <img src="assets/img/s.png" alt="" /> -->
-                <picture>
-                    <source
-                        srcset="assets/img/contact-me-mobile.png"
-                        media="(max-width: 768px)"
-                    />
-                    <img src="assets/img/s.png" alt="" />
-                </picture>
+            <div class="modal__wrap">
+                <div class="close"></div>
+                <div class="image">
+                    <!-- <img src="assets/img/s.png" alt="" /> -->
+                    <picture>
+                        <source
+                            srcset="assets/img/contact-me-mobile.png"
+                            media="(max-width: 768px)"
+                        />
+                        <img src="assets/img/s.png" alt="" />
+                    </picture>
+                </div>
+                <form class="contacts-form">
+                    <label class="input-wrap">
+                        <span class="label">Имя *</span>
+                        <input type="text" required placeholder="Имя" />
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Email *</span>
+                        <input type="email" required />
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Телефон *</span>
+                        <input type="tel" required />
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Салон *</span>
+                        <select class="select" name="salon">
+                            <option value="Postępu 27, Warszawa">
+                                Postępu 27, Warszawa
+                            </option>
+                            <option value="Giełdowa 4E, Warszawa">
+                                Giełdowa 4E, Warszawa
+                            </option>
+                            <option value="Al. KEN 36, Warszawa">
+                                Al. KEN 36, Warszawa
+                            </option>
+                            <option value="Herbu Szreniawa 11, Warszawa">
+                                Herbu Szreniawa 11, Warszawa
+                            </option>
+                            <option value="Masarska 8, Kraków">
+                                Masarska 8, Kraków
+                            </option>
+                            <option value="Gwiaździsta 18, Wrocław">
+                                Gwiaździsta 18, Wrocław
+                            </option>
+                        </select>
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Сообщение *</span>
+                        <textarea
+                            required
+                            placeholder="Написать сообщение..."
+                        ></textarea>
+                    </label>
+                    <label class="confirmation">
+                        <input type="checkbox" required />
+                        <span class="checkbox"></span>
+                        You agree to our friendly&nbsp;
+                        <a class="link" href="#">privacy policy</a>
+                    </label>
+                    <button class="btn lg">Написать</button>
+                </form>
             </div>
-            <form class="contacts-form">
-                <label class="input-wrap">
-                    <span class="label">Имя *</span>
-                    <input type="text" required placeholder="Имя" />
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Email *</span>
-                    <input type="email" required />
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Телефон *</span>
-                    <input type="tel" required />
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Салон *</span>
-                    <select class="select" name="salon">
-                        <option value="Postępu 27, Warszawa">
-                            Postępu 27, Warszawa
-                        </option>
-                        <option value="Giełdowa 4E, Warszawa">
-                            Giełdowa 4E, Warszawa
-                        </option>
-                        <option value="Al. KEN 36, Warszawa">
-                            Al. KEN 36, Warszawa
-                        </option>
-                        <option value="Herbu Szreniawa 11, Warszawa">
-                            Herbu Szreniawa 11, Warszawa
-                        </option>
-                        <option value="Masarska 8, Kraków">
-                            Masarska 8, Kraków
-                        </option>
-                        <option value="Gwiaździsta 18, Wrocław">
-                            Gwiaździsta 18, Wrocław
-                        </option>
-                    </select>
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Сообщение *</span>
-                    <textarea
-                        required
-                        placeholder="Написать сообщение..."
-                    ></textarea>
-                </label>
-                <label class="confirmation">
-                    <input type="checkbox" required />
-                    <span class="checkbox"></span>
-                    You agree to our friendly&nbsp;
-                    <a class="link" href="#">privacy policy</a>
-                </label>
-                <button class="btn lg">Написать</button>
-            </form>
+            <div class="modal__overlay"></div>
         </div>
         <div class="modal contact-modal">
-            <div class="close"></div>
-            <div class="image">
-                <img src="assets/img/popup2.png" alt="" />
+            <div class="modal__wrap">
+                <div class="close"></div>
+                <div class="image">
+                    <img src="assets/img/popup2.png" alt="" />
+                </div>
+                <form class="contacts-form">
+                    <label class="input-wrap">
+                        <span class="label">Имя *</span>
+                        <input type="text" required placeholder="Имя" />
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Email *</span>
+                        <input type="email" required />
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Телефон *</span>
+                        <input type="tel" required />
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Салон *</span>
+                        <select class="select" name="salon">
+                            <option value="Postępu 27, Warszawa">
+                                Postępu 27, Warszawa
+                            </option>
+                            <option value="Giełdowa 4E, Warszawa">
+                                Giełdowa 4E, Warszawa
+                            </option>
+                            <option value="Al. KEN 36, Warszawa">
+                                Al. KEN 36, Warszawa
+                            </option>
+                            <option value="Herbu Szreniawa 11, Warszawa">
+                                Herbu Szreniawa 11, Warszawa
+                            </option>
+                            <option value="Masarska 8, Kraków">
+                                Masarska 8, Kraków
+                            </option>
+                            <option value="Gwiaździsta 18, Wrocław">
+                                Gwiaździsta 18, Wrocław
+                            </option>
+                        </select>
+                    </label>
+                    <label class="input-wrap">
+                        <span class="label">Сообщение *</span>
+                        <textarea
+                            required
+                            placeholder="Написать сообщение..."
+                        ></textarea>
+                    </label>
+                    <label class="confirmation">
+                        <input type="checkbox" required />
+                        <span class="checkbox"></span>
+                        You agree to our friendly&nbsp;
+                        <a class="link" href="#">privacy policy</a>
+                    </label>
+                    <button class="btn lg">Написать</button>
+                </form>
             </div>
-            <form class="contacts-form">
-                <label class="input-wrap">
-                    <span class="label">Имя *</span>
-                    <input type="text" required placeholder="Имя" />
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Email *</span>
-                    <input type="email" required />
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Телефон *</span>
-                    <input type="tel" required />
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Салон *</span>
-                    <select class="select" name="salon">
-                        <option value="Postępu 27, Warszawa">
-                            Postępu 27, Warszawa
-                        </option>
-                        <option value="Giełdowa 4E, Warszawa">
-                            Giełdowa 4E, Warszawa
-                        </option>
-                        <option value="Al. KEN 36, Warszawa">
-                            Al. KEN 36, Warszawa
-                        </option>
-                        <option value="Herbu Szreniawa 11, Warszawa">
-                            Herbu Szreniawa 11, Warszawa
-                        </option>
-                        <option value="Masarska 8, Kraków">
-                            Masarska 8, Kraków
-                        </option>
-                        <option value="Gwiaździsta 18, Wrocław">
-                            Gwiaździsta 18, Wrocław
-                        </option>
-                    </select>
-                </label>
-                <label class="input-wrap">
-                    <span class="label">Сообщение *</span>
-                    <textarea
-                        required
-                        placeholder="Написать сообщение..."
-                    ></textarea>
-                </label>
-                <label class="confirmation">
-                    <input type="checkbox" required />
-                    <span class="checkbox"></span>
-                    You agree to our friendly&nbsp;
-                    <a class="link" href="#">privacy policy</a>
-                </label>
-                <button class="btn lg">Написать</button>
-            </form>
+            <div class="modal__overlay"></div>
         </div>
         <div class="overlay"></div>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

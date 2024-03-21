@@ -17,6 +17,10 @@
     }
 }
 
+p {
+    line-height: 140%;
+}
+
 h2 {
     font-size: 56px;
     font-weight: 300;
@@ -299,6 +303,22 @@ form {
                 color: #afaeb6;
             }
         }
+        &.phone {
+            position: relative;
+            .ss-main {
+                z-index: 1;
+                position: absolute;
+                bottom: 6px;
+                left: 5px;
+                width: 30px;
+                border: none;
+                padding: 0;
+                box-shadow: none;
+                .ss-single {
+                    white-space: nowrap;
+                }
+            }
+        }
     }
     .confirmation {
         cursor: pointer;
@@ -370,8 +390,20 @@ form {
 .ss-content {
     margin-top: 8px !important;
     padding: 8px 0;
+    border-radius: 6px;
     .ss-list {
-        border-radius: 6px;
+        max-height: 184px;
+        @include sm {
+            max-height: 134px;
+            .ss-option {
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+                &:after {
+                    transform: scale(0.9);
+                }
+            }
+        }
     }
     .ss-option {
         transition: 0.2s;
@@ -404,5 +436,8 @@ form {
                 opacity: 1;
             }
         }
+    }
+    &.countryCodes {
+        min-width: 300px;
     }
 }
