@@ -71,14 +71,11 @@ addEventListenerAll(".services-list__item", "mouseover", (e) => {
 
 const testimonials = new Swiper(".testimonials-slider", {
     loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     freeMode: {
-        enabled: true,
-        sticky: false,
-        momentumBounce: false,
-        momentumVelocityRatio: 0.5,
+        enabled: false,
     },
     slideClass: "testimonials-slider__item",
     scrollbar: { enabled: false, hide: true },
@@ -110,6 +107,12 @@ const testimonials = new Swiper(".testimonials-slider", {
             pagination: {
                 enabled: false,
                 hide: true,
+            },
+            freeMode: {
+                enabled: true,
+                sticky: false,
+                momentumBounce: false,
+                momentumVelocityRatio: 0.5,
             },
         },
     },
@@ -155,16 +158,8 @@ const testimonials = new Swiper(".testimonials-slider", {
         slidesPerView: 1,
     });
 
-    // const booksy = new Swiper(".booksy-btn", {
-    //     slideClass: "btn",
-    //     slidesPerView: 1,
-    // });
     addresses.controller.control = pictures;
-    // addresses.controller.control = booksy;
     pictures.controller.control = addresses;
-    // pictures.controller.control = booksy;
-    // booksy.controller.control = pictures;
-    // booksy.controller.control = addresses;
 
     addresses.on("slideChange", function (e) {
         const cityClass = `.addresses__tabs__item`;
@@ -229,9 +224,9 @@ const testimonials = new Swiper(".testimonials-slider", {
     const overlay = $(".overlay");
     const body = $("html");
     modalBtn.on("click", () => {
-        modal.addClass("active");
-        overlay.addClass("active");
-        body.addClass("no-scroll");
+        modal.toggleClass("active");
+        overlay.toggleClass("active");
+        body.toggleClass("no-scroll");
     });
     overlay.on("click", () => {
         $("header").removeClass("active");
@@ -270,27 +265,169 @@ document.querySelectorAll(".select").forEach(
         })
 );
 
-const countryCodes = new SlimSelect({
-    select: ".countryCodes",
-    data: countries.map((item) => ({
-        text: `${item.code} (${item.name})`,
-        value: item.dial_code,
-        selected: item.code === "PL",
-    })),
-    events: {
-        afterChange: (newVal) => {
-            console.log(newVal);
-            return {
-                text: `${item.code}`,
-                value: item.dial_code,
-                selected: item.code === "PL",
-            };
-        },
-    },
+document.querySelectorAll(".countryCodes").forEach((item) => {
+    const input = item.parentElement.querySelector("input");
+    if (input) {
+        const mask = IMask(input, {
+            mask: "+{48} (000) 000 000",
+            lazy: false,
+        });
+        new SlimSelect({
+            select: item,
+            data: countries.map((item) => ({
+                text: `${item.iso} (${item.name})`,
+                value: {
+                    code: item.code,
+                    mask: item.mask,
+                },
+                selected: item.iso === "PL",
+            })),
+            events: {
+                afterChange: (newVal) => {
+                    const val = newVal[0].value;
+                    mask.updateOptions({
+                        mask: `+{${val.code.slice(1)}} ${val.mask.replaceAll(
+                            "#",
+                            "0"
+                        )}`,
+                    });
+                    mask.value = "";
+                },
+            },
+        });
+    }
 });
-console.log(countryCodes);
 
 $("footer .menu:not(.contacts) .title").on("click", function () {
     $(this).parents().toggleClass("active");
-    // $(this).siblings("ul").stop().slideToggle(400);
 });
+
+const notFoundServices = new Swiper("section#not-found .services-list", {
+    loop: true,
+    // autoplay: {
+    //     delay: 5000,
+    // },
+    slideClass: "services-list__item",
+    slidesPerView: 2,
+    spaceBetween: 12,
+    scrollbar: {
+        enabled: true,
+        el: ".services-list__scrollbar",
+        draggable: true,
+        snapOnRelease: true,
+        dragSize: "auto",
+        hide: false,
+    },
+    breakpoints: {
+        993: {
+            enabled: false,
+        },
+        577: {
+            slidesPerView: 2,
+            enabled: true,
+            spaceBetween: 20,
+            scrollbar: {
+                enabled: false,
+                hide: true,
+            },
+        },
+    },
+});
+
+const addressesMap = new Swiper("#contacts-map .contacts__addresses", {
+    // loop: true,
+    slideClass: "contacts__addresses__item",
+    direction: "vertical",
+    slidesPerView: 4,
+    spaceBetween: 10,
+    scrollbar: {
+        enabled: true,
+        el: ".contacts__addresses__scrollbar",
+        draggable: true,
+        snapOnRelease: true,
+        dragSize: "auto",
+    },
+    mousewheel: {
+        releaseOnEdges: true,
+        sensitivity: 1,
+        forceToAxis: true,
+    },
+});
+
+try {
+    console.log(google);
+    const markers = [
+        {
+            posLat: 52.2309364,
+            posLng: 20.976091,
+        },
+        {
+            posLat: 52.1309364,
+            posLng: 20.976091,
+        },
+        {
+            posLat: 51.9309364,
+            posLng: 20.976091,
+        },
+        {
+            posLat: 52.8309364,
+            posLng: 20.976091,
+        },
+        {
+            posLat: 52.7309364,
+            posLng: 20.976091,
+        },
+        {
+            posLat: 52.6309364,
+            posLng: 20.976091,
+        },
+    ];
+
+    // const posMarkerLat = 52.2309364,
+    //     posMarkerLng = 20.976091,
+    //     posCenterLat = posMarkerLat + 0.000657,
+    //     posCenterlng = posMarkerLng - 0.0017747,
+    //     posCenterMobileLat = posMarkerLat,
+    //     posCenterMobilelng = posMarkerLng + 0.00031;
+
+    async function initMap() {
+        const { Map } = await google.maps.importLibrary("maps");
+        const { Marker } = await google.maps.importLibrary("marker");
+
+        let posCenter = {
+            lat: markers[0].posLat + 0.000657,
+            lng: markers[0].posLng - 0.0017747,
+        };
+        // const check = document.getElementById("contacts-map").offsetWidth;
+        const sizeMarker = new google.maps.Size(46, 60);
+        // if (check < 768) {
+        //     posCenter = {
+        //         lat: posCenterMobileLat,
+        //         lng: posCenterMobilelng,
+        //     };
+        // }
+        const map = new Map(document.querySelector(".contacts__map"), {
+            center: posCenter,
+            zoom: 16,
+            // streetViewControl: false,
+            // fullscreenControl: false,
+            // mapTypeControl: false,
+        });
+        const image = {
+            url: "assets/img/marker.svg",
+            scaledSize: sizeMarker,
+        };
+
+        markers.forEach((marker) => {
+            new Marker({
+                position: { lat: marker.posLat, lng: marker.posLng },
+                map: map,
+                icon: image,
+                optimized: false,
+            });
+        });
+    }
+    initMap();
+} catch (e) {
+    console.log(e);
+}

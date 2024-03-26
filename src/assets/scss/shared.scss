@@ -24,6 +24,7 @@ p {
 h2 {
     font-size: 56px;
     font-weight: 300;
+    line-height: 110%;
     @include lg {
         font-size: 44px;
     }
@@ -64,8 +65,9 @@ h2 {
     &.lg {
         height: 60px;
         line-height: 60px;
+        font-size: 16px;
         @include md {
-            font-size: 16px;
+            font-size: 12px;
             height: 44px;
             line-height: 44px;
         }
@@ -201,7 +203,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     @include md {
-        padding: 0 16px;
+        padding: 0 12px;
     }
 }
 
@@ -278,6 +280,7 @@ form {
             height: 42px;
             line-height: 42px;
             padding: 0 12px;
+            color: #afaeb6;
             &::placeholder {
                 color: #afaeb6;
             }
@@ -306,17 +309,48 @@ form {
         &.phone {
             position: relative;
             .ss-main {
+                width: auto;
                 z-index: 1;
                 position: absolute;
                 bottom: 6px;
                 left: 5px;
-                width: 30px;
                 border: none;
                 padding: 0;
                 box-shadow: none;
-                .ss-single {
+                .ss-values {
+                    flex: none;
+                    width: 20px;
+                    overflow: hidden;
                     white-space: nowrap;
+                    font-size: 16px;
+                    color: #afaeb6;
                 }
+                .ss-arrow path {
+                    stroke: #afaeb6;
+                    stroke-width: 10px;
+                }
+            }
+            .select-arr {
+                transition: 0.2s;
+                content: "";
+                position: absolute;
+                left: 24px;
+                top: 46px;
+                width: 20px;
+                height: 20px;
+                background-image: url(../img/chevron-down.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .ss-open-below + .select-arr {
+                &:after {
+                    transition: 0.2s;
+                    transform: rotate(180deg);
+                }
+            }
+            input {
+                padding-left: 50px;
             }
         }
     }
@@ -385,6 +419,16 @@ form {
                 margin-top: 0;
             }
         }
+    }
+}
+
+.ss-main {
+    .ss-values .ss-single {
+        font-size: 12px;
+    }
+    .ss-arrow path {
+        stroke: #caa19e;
+        stroke-width: 14px;
     }
 }
 .ss-content {

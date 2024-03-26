@@ -19,3 +19,10 @@ app.use("/scss", express.static(__dirname + "/dist/scss"));
 app.get("*", function (_, res) {
     res.sendFile("dist/index.html", { root: __dirname });
 });
+
+app.get("/contacts", function (_, res) {
+    res.sendFile("dist/contacts.html", { root: __dirname });
+});
+app.get("/404", function (_, res) {
+    res.sendFile("dist/404.html", { root: __dirname });
+});
