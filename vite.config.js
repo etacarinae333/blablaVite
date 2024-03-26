@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
     root: "src",
@@ -8,7 +9,14 @@ export default defineConfig({
     },
     build: {
         sourcemap: false,
-        outDir: "../dist",
+        outDir: resolve(__dirname, "dist"),
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, "src/index.html"),
+                404: resolve(__dirname, "src/404.html"),
+                contacts: resolve(__dirname, "src/contacts.html"),
+            },
+        },
     },
     publicDir: "assets",
     plugins: [],
