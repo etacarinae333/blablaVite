@@ -1,717 +1,581 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>BabaLab</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        <link
-            href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./assets/scss/styles.scss" />
-    </head>
-    <body>
-        <header class="header">
-            <div class="container">
-                <a href="/" class="header__logo">
-                    <img src="assets/img/logo.svg" alt="BabaLab" />
-                </a>
-                <div class="header__burger"></div>
-                <div class="header__main">
-                    <nav class="header__menu">
-                        <ul>
-                            <li class="with-dropdown services">
-                                <a href="#">Услуги</a>
-                                <div class="dropdown">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Лазерная эпиляция</a>
-                                        </li>
-                                        <li><a href="#">Электроопеляция</a></li>
-                                        <li><a href="#">Шугаринг</a></li>
-                                        <li>
-                                            <a href="#">Восковая депиляция</a>
-                                        </li>
-                                        <li><a href="#">Массаж ICOONE</a></li>
-                                        <li>
-                                            <a href="#">Мужская депиляция</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <div class="lang">
-                        <div class="current">RU</div>
-                        <ul class="lang__list">
-                            <li><a href="#">PL</a></li>
-                            <li><a href="#">UA</a></li>
-                            <li><a href="#">EN</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn contact-modal-btn">Записаться</div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BabaLab</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/scss/styles.scss" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="header__logo">
+          <img src="assets/img/logo.svg" alt="BabaLab" />
+        </a>
+        <div class="header__burger"></div>
+        <div class="header__main">
+          <nav class="header__menu">
+            <ul>
+              <li class="with-dropdown services">
+                <a href="#">Услуги</a>
+                <div class="dropdown">
+                  <ul>
+                    <li>
+                      <a href="#">Лазерная эпиляция</a>
+                    </li>
+                    <li><a href="#">Электроопеляция</a></li>
+                    <li><a href="#">Шугаринг</a></li>
+                    <li>
+                      <a href="#">Восковая депиляция</a>
+                    </li>
+                    <li><a href="#">Массаж ICOONE</a></li>
+                    <li>
+                      <a href="#">Мужская депиляция</a>
+                    </li>
+                  </ul>
                 </div>
+              </li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="lang">
+            <div class="current">RU</div>
+            <ul class="lang__list">
+              <li><a href="#">PL</a></li>
+              <li><a href="#">UA</a></li>
+              <li><a href="#">EN</a></li>
+            </ul>
+          </div>
+          <div class="btn">Позвонить</div>
+          <div class="btn contact-modal-btn">Записаться</div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="contacts" class="contacts">
+        <div class="container">
+          <div class="contacts-info">
+            <h2>Вы всегда можете связаться с нами</h2>
+            <div class="desc">
+              чтобы уточнить информацию о работе салона,<br />
+              записаться на услугу или получить дополнительные<br />
+              консультации
             </div>
-        </header>
-        <main>
-            <section id="contacts" class="contacts">
-                <div class="container">
-                    <div class="contacts-info">
-                        <h2>Вы всегда можете связаться с нами</h2>
-                        <div class="desc">
-                            чтобы уточнить информацию о работе салона,<br />
-                            записаться на услугу или получить дополнительные<br />
-                            консультации
-                        </div>
-                        <ul class="contacts">
-                            <li class="contacts__item">
-                                <b>телефон:</b>
-                                <a href="tel:+48730162614" target="_blank"
-                                    >+48 730 162 614</a
-                                >
-                            </li>
-                            <li class="contacts__item">
-                                <b>email:</b>
-                                <a
-                                    href="mailto:admin@babalab.pl"
-                                    target="_blank"
-                                    >admin@babalab.pl</a
-                                >
-                            </li>
-                            <li class="contacts__item">
-                                <b>instagram:</b>
-                                <a
-                                    href="https://instagram.com/babalab.pl"
-                                    target="_blank"
-                                    >@babalab.pl</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <form class="contacts-form">
-                        <label class="input-wrap">
-                            <span class="label">Имя *</span>
-                            <input type="text" required placeholder="Имя" />
-                        </label>
-                        <label class="input-wrap">
-                            <span class="label">Email *</span>
-                            <input type="email" required />
-                        </label>
-                        <label class="input-wrap phone">
-                            <select class="countryCodes"></select>
-                            <span class="label">Телефон *</span>
-                            <input type="tel" required />
-                        </label>
-                        <label class="input-wrap select-wrap">
-                            <span class="label">Город *</span>
-                            <select
-                                class="select"
-                                name="city"
-                                placeholder="Выбрать город"
-                            >
-                                <option value="Варшава">Варшава</option>
-                                <option value="Варшава">Краков</option>
-                                <option value="Варшава">Вроцлав</option>
-                            </select>
-                        </label>
-                        <label class="input-wrap select-wrap">
-                            <span class="label">Усуга *</span>
-                            <select
-                                class="select"
-                                name="service"
-                                aria-placeholder="Выбрать услугу"
-                            >
-                                <option value="Лазерная эпиляция">
-                                    Лазерная эпиляция
-                                </option>
-                                <option value="Электроэпиляция">
-                                    Электроэпиляция
-                                </option>
-                                <option value="Шугаринг">Шугаринг</option>
-                                <option value="Восковая депиляция">
-                                    Восковая депиляция
-                                </option>
-                                <option value="Массаж ICOONE">
-                                    Массаж ICOONE
-                                </option>
-                            </select>
-                        </label>
-                        <label class="input-wrap">
-                            <span class="label">Сообщение *</span>
-                            <textarea
-                                required
-                                placeholder="Написать сообщение..."
-                            ></textarea>
-                        </label>
-                        <label class="confirmation">
-                            <input type="checkbox" required />
-                            <span class="checkbox"></span>You agree to our
-                            friendly&nbsp;
-                            <a class="link" href="#">privacy policy</a>
-                        </label>
-                        <button class="btn lg">Написать</button>
-                    </form>
+            <ul class="contacts">
+              <li class="contacts__item">
+                <b>телефон:</b>
+                <a href="tel:+48730162614" target="_blank">+48 730 162 614</a>
+              </li>
+              <li class="contacts__item">
+                <b>email:</b>
+                <a href="mailto:admin@babalab.pl" target="_blank"
+                  >admin@babalab.pl</a
+                >
+              </li>
+              <li class="contacts__item">
+                <b>instagram:</b>
+                <a href="https://instagram.com/babalab.pl" target="_blank"
+                  >@babalab.pl</a
+                >
+              </li>
+            </ul>
+          </div>
+          <form class="contacts-form">
+            <label class="input-wrap">
+              <span class="label">Имя *</span>
+              <input type="text" required placeholder="Имя" />
+            </label>
+            <label class="input-wrap">
+              <span class="label">Email *</span>
+              <input type="email" required />
+            </label>
+            <label class="input-wrap phone">
+              <select class="countryCodes"></select>
+              <span class="label">Телефон *</span>
+              <input type="tel" required />
+            </label>
+            <label class="input-wrap">
+              <span class="label">Сообщение *</span>
+              <textarea required placeholder="Написать сообщение..."></textarea>
+            </label>
+            <label class="confirmation">
+              <input type="checkbox" required />
+              <span class="checkbox"></span>You agree to our friendly&nbsp;
+              <a class="link" href="#">privacy policy</a>
+            </label>
+            <button class="btn lg">Написать</button>
+          </form>
+        </div>
+      </section>
+      <section id="addresses">
+        <div class="container">
+          <h2>Салоны</h2>
+          <div class="addresses">
+            <div class="addresses__tabs">
+              <div class="addresses__tabs__wrap">
+                <div class="addresses__tabs__item active" data-slide="0">
+                  Варшава
                 </div>
-            </section>
-            <section id="addresses">
-                <div class="container">
-                    <h2>Салоны</h2>
-                    <div class="addresses">
-                        <div class="addresses__tabs">
-                            <div class="addresses__tabs__wrap">
-                                <div
-                                    class="addresses__tabs__item active"
-                                    data-slide="0"
-                                >
-                                    Варшава
-                                </div>
-                                <div
-                                    class="addresses__tabs__item"
-                                    data-slide="1"
-                                >
-                                    Краков
-                                </div>
-                                <div
-                                    class="addresses__tabs__item"
-                                    data-slide="2"
-                                >
-                                    Вроцлав
-                                </div>
-                            </div>
+                <div class="addresses__tabs__item" data-slide="1">Краков</div>
+                <div class="addresses__tabs__item" data-slide="2">Вроцлав</div>
+              </div>
 
-                            <div class="addresses__tabs__subtabs swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="addresses__tabs__subtabs__item">
-                                        <div
-                                            class="street active"
-                                            data-slide="0"
-                                            data-parent-slide="0"
-                                        >
-                                            Wola
-                                        </div>
-                                        <div
-                                            class="street"
-                                            data-slide="1"
-                                            data-parent-slide="0"
-                                        >
-                                            Mokotów
-                                        </div>
-                                        <div
-                                            class="street"
-                                            data-slide="2"
-                                            data-parent-slide="0"
-                                        >
-                                            Ursynów
-                                        </div>
-                                        <div
-                                            class="street"
-                                            data-slide="3"
-                                            data-parent-slide="0"
-                                        >
-                                            Wilanów
-                                        </div>
-                                    </div>
-                                    <div class="addresses__tabs__subtabs__item">
-                                        <div
-                                            class="street"
-                                            data-slide="4"
-                                            data-parent-slide="1"
-                                        >
-                                            Śródmieście
-                                        </div>
-                                    </div>
-                                    <div class="addresses__tabs__subtabs__item">
-                                        <div
-                                            class="street"
-                                            data-slide="5"
-                                            data-parent-slide="2"
-                                        >
-                                            Krzyki
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="corner corner-top-1"></div>
-                        </div>
-                        <div class="addresses__list swiper">
-                            <div class="swiper-wrapper">
-                                <div class="addresses__list__item">
-                                    <b>Wola:</b>
-                                    <p>
-                                        ul. Giełdowa 4E, U4<br />
-                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                        <b>Вс:</b> 10:00 – 20:00
-                                    </p>
-                                </div>
-                                <div class="addresses__list__item">
-                                    <b>Wola2:</b>
-                                    <p>
-                                        ul. Giełdowa 4E, U4<br />
-                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                        <b>Вс:</b> 10:00 – 20:00
-                                    </p>
-                                </div>
-                                <div class="addresses__list__item">
-                                    <b>Wola3:</b>
-                                    <p>
-                                        ul. Giełdowa 4E, U4<br />
-                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                        <b>Вс:</b> 10:00 – 20:00
-                                    </p>
-                                </div>
-                                <div class="addresses__list__item">
-                                    <b>Wola4:</b>
-                                    <p>
-                                        ul. Giełdowa 4E, U4<br />
-                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                        <b>Вс:</b> 10:00 – 20:00
-                                    </p>
-                                </div>
-                                <div class="addresses__list__item">
-                                    <b>Wola5:</b>
-                                    <p>
-                                        ul. Giełdowa 4E, U4<br />
-                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                        <b>Вс:</b> 10:00 – 20:00
-                                    </p>
-                                </div>
-                                <div class="addresses__list__item">
-                                    <b>Wola6:</b>
-                                    <p>
-                                        ul. Giełdowa 4E, U4<br />
-                                        <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                        <b>Вс:</b> 10:00 – 20:00
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="addresses__list__pagination">
-                            <div class="pagination-prev btn-arr white"></div>
-                            <div class="pagination"></div>
-                            <div class="pagination-next btn-arr white"></div>
-                        </div>
-                        <div class="addresses__pictures swiper">
-                            <div class="swiper-wrapper">
-                                <div class="addresses__pictures__item">
-                                    <img
-                                        src="assets/img/Subtract (5).png"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="addresses__pictures__item">
-                                    <img
-                                        src="assets/img/Subtract (4).png"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="addresses__pictures__item">
-                                    <img
-                                        src="assets/img/Subtract (3).png"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="addresses__pictures__item">
-                                    <img
-                                        src="assets/img/Subtract (2).png"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="addresses__pictures__item">
-                                    <img
-                                        src="assets/img/Subtract (1).png"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="addresses__pictures__item">
-                                    <img src="assets/img/Subtract.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="corner corner-top-2"></div>
-                            <div class="corner corner-bottom-1"></div>
-                            <div class="corner corner-bottom-2"></div>
-                        </div>
-                        <div class="booksy-btn">
-                            <a
-                                href="https://booksy.com/pl-pl/instant-experiences/widget/5038,12112,110179,87005,77417,36860?instant_experiences_enabled=true&ig_ix=true&fbclid=PAAaaKmVqNGBhzzauwwcR1oQaySQ-UuKn6-XU3ShlVVnCRKCTOwitFNtJwEuU_aem_AdX8ZFKduc8y18Mg2jaikh1ebImzEXYK4VbXEMVEf2KNrvMPtp4T66b4RVJxq82fMSw"
-                                target="_blank"
-                                class="btn"
-                            >
-                                <img src="assets/img/booksy.svg" alt="" />
-                            </a>
-                        </div>
+              <div class="addresses__tabs__subtabs swiper">
+                <div class="swiper-wrapper">
+                  <div class="addresses__tabs__subtabs__item">
+                    <div
+                      class="street active"
+                      data-slide="0"
+                      data-parent-slide="0"
+                    >
+                      Wola
                     </div>
+                    <div class="street" data-slide="1" data-parent-slide="0">
+                      Mokotów
+                    </div>
+                    <div class="street" data-slide="2" data-parent-slide="0">
+                      Ursynów
+                    </div>
+                    <div class="street" data-slide="3" data-parent-slide="0">
+                      Wilanów
+                    </div>
+                  </div>
+                  <div class="addresses__tabs__subtabs__item">
+                    <div class="street" data-slide="4" data-parent-slide="1">
+                      Śródmieście
+                    </div>
+                  </div>
+                  <div class="addresses__tabs__subtabs__item">
+                    <div class="street" data-slide="5" data-parent-slide="2">
+                      Krzyki
+                    </div>
+                  </div>
                 </div>
-            </section>
-            <section id="contacts-map">
-                <div class="container">
-                    <div class="contacts">
-                        <div class="contacts__addresses swiper">
-                            <div class="swiper-wrapper">
-                                <div class="contacts__addresses__item">
-                                    <div class="image">
-                                        <img
-                                            src="assets/img/Image (2).png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="text">
-                                        <b>Warszawa, Wola:</b>
-                                        <p>
-                                            ul. Giełdowa 4E, U4<br />
-                                            <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                            <b>Вс:</b> 10:00 – 20:00
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contacts__addresses__item">
-                                    <div class="image">
-                                        <img
-                                            src="assets/img/Image (3).png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="text">
-                                        <b>Warszawa, Mokotów:</b>
-                                        <p>
-                                            Postępu 27<br />
-                                            <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                            <b>Вс:</b> 10:00 – 20:00
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contacts__addresses__item">
-                                    <div class="image">
-                                        <img
-                                            src="assets/img/Image (4).png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="text">
-                                        <b>Warszawa, Ursynów:</b>
-                                        <p>
-                                            Al.KEN 36, lok. 39<br />
-                                            <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                            <b>Вс:</b> 10:00 – 20:00
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contacts__addresses__item">
-                                    <div class="image">
-                                        <img
-                                            src="assets/img/Image (5).png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="text">
-                                        <b>Warszawa, Wilanów:</b>
-                                        <p>
-                                            Herbu Szreniawa 11, lok. 1<br />
-                                            <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                            <b>Вс:</b> 10:00 – 20:00
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contacts__addresses__item">
-                                    <div class="image">
-                                        <img
-                                            src="assets/img/Image (6).png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="text">
-                                        <b>Kraków, Śródmieście:</b>
-                                        <p>
-                                            Masarska 8, lok.103<br />
-                                            <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                            <b>Вс:</b> 10:00 – 20:00
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contacts__addresses__item">
-                                    <div class="image">
-                                        <img
-                                            src="assets/img/Image (7).png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="text">
-                                        <b>Wrocław, Krzyki:</b>
-                                        <p>
-                                            Gwiaździsta 18, lok.7<br />
-                                            <b>Пн-Сб:</b> 08:00 – 21:00<br />
-                                            <b>Вс:</b> 10:00 – 20:00
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contacts__addresses__scrollbar"></div>
-                        </div>
-                        <div class="contacts__map"></div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="container">
-                <div class="left">
-                    <div class="row">
-                        <a href="/" class="logo"
-                            ><img src="assets/img/logo.svg" alt=""
-                        /></a>
-                    </div>
-                    <div class="menu">
-                        <div class="title">Меню:</div>
-                        <ul>
-                            <li>
-                                <a href="#">Главная</a>
-                            </li>
-                            <li>
-                                <a href="#">О нас</a>
-                            </li>
-                            <li>
-                                <a href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu">
-                        <div class="title">Услуги:</div>
-                        <ul>
-                            <li>
-                                <a href="#">Лазерная эпиляция</a>
-                            </li>
-                            <li>
-                                <a href="#">Электроэпиляция</a>
-                            </li>
-                            <li>
-                                <a href="#">Шугаринг</a>
-                            </li>
-                            <li class="mobile">
-                                <a href="#">Восковая депиляция</a>
-                            </li>
-                            <li class="mobile">
-                                <a href="#">Мужская депиляция</a>
-                            </li>
-                            <li class="mobile">
-                                <a href="#">Массаж ICOONE</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu no-mobile">
-                        <div class="title">&nbsp;</div>
-                        <ul>
-                            <li>
-                                <a href="#">Восковая депиляция</a>
-                            </li>
-                            <li>
-                                <a href="#">Мужская депиляция</a>
-                            </li>
-                            <li>
-                                <a href="#">Массаж ICOONE</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu contacts">
-                        <div class="title">Контакты:</div>
-                        <ul>
-                            <li>
-                                <a href="tel:+48730162614" target="_blank">
-                                    <img src="assets/img/Phone.svg" alt="" />
-                                    +48 730 162 614</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="mailto:admin@babalab.pl"
-                                    target="_blank"
-                                >
-                                    <img src="assets/img/Envelope.svg" alt="" />
-                                    admin@babalab.pl</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://instagram.com/babalab.pl"
-                                    target="_blank"
-                                >
-                                    <img
-                                        src="assets/img/InstagramLogo.svg"
-                                        alt=""
-                                    />
-                                    babalab.pl
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="image">
-                        <img src="assets/img/circle-photo.png" alt="" />
-                    </div>
-                    <div class="name">Екатерина</div>
-                    <p>основательница babalab</p>
-                    <div class="o-btn contact-me-btn">Напиши мне</div>
-                </div>
-                <div class="bottom">
-                    <ul>
-                        <li><a href="#">Политика конфиденциальности</a></li>
-                        <li><a href="#">Договор оферты</a></li>
-                        <li><a href="#">babalab.pl</a></li>
-                        <li>All rights reserved © 2024</li>
-                    </ul>
-                </div>
+              </div>
+              <div class="corner corner-top-1"></div>
             </div>
-        </footer>
-        <div class="modal contact-me">
-            <div class="modal__wrap">
-                <div class="close"></div>
-                <div class="image">
-                    <!-- <img src="assets/img/s.png" alt="" /> -->
-                    <picture>
-                        <source
-                            srcset="assets/img/contact-me-mobile.png"
-                            media="(max-width: 768px)"
-                        />
-                        <img src="assets/img/s.png" alt="" />
-                    </picture>
+            <div class="addresses__list swiper">
+              <div class="swiper-wrapper">
+                <div class="addresses__list__item">
+                  <b>Wola:</b>
+                  <p>
+                    ul. Giełdowa 4E, U4<br />
+                    <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                    <b>Вс:</b> 10:00 – 20:00
+                  </p>
                 </div>
-                <form class="contacts-form">
-                    <label class="input-wrap">
-                        <span class="label">Имя *</span>
-                        <input type="text" required placeholder="Имя" />
-                    </label>
-                    <label class="input-wrap">
-                        <span class="label">Email *</span>
-                        <input type="email" required />
-                    </label>
-                    <label class="input-wrap phone">
-                        <select class="countryCodes"></select>
-                        <span class="label">Телефон *</span>
-                        <input type="tel" required />
-                    </label>
-                    <label class="input-wrap">
-                        <span class="label">Салон *</span>
-                        <select class="select" name="salon">
-                            <option value="Postępu 27, Warszawa">
-                                Postępu 27, Warszawa
-                            </option>
-                            <option value="Giełdowa 4E, Warszawa">
-                                Giełdowa 4E, Warszawa
-                            </option>
-                            <option value="Al. KEN 36, Warszawa">
-                                Al. KEN 36, Warszawa
-                            </option>
-                            <option value="Herbu Szreniawa 11, Warszawa">
-                                Herbu Szreniawa 11, Warszawa
-                            </option>
-                            <option value="Masarska 8, Kraków">
-                                Masarska 8, Kraków
-                            </option>
-                            <option value="Gwiaździsta 18, Wrocław">
-                                Gwiaździsta 18, Wrocław
-                            </option>
-                        </select>
-                    </label>
-                    <label class="input-wrap">
-                        <span class="label">Сообщение *</span>
-                        <textarea
-                            required
-                            placeholder="Написать сообщение..."
-                        ></textarea>
-                    </label>
-                    <label class="confirmation">
-                        <input type="checkbox" required />
-                        <span class="checkbox"></span>
-                        You agree to our friendly&nbsp;
-                        <a class="link" href="#">privacy policy</a>
-                    </label>
-                    <button class="btn lg">Написать</button>
-                </form>
+                <div class="addresses__list__item">
+                  <b>Wola2:</b>
+                  <p>
+                    ul. Giełdowa 4E, U4<br />
+                    <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                    <b>Вс:</b> 10:00 – 20:00
+                  </p>
+                </div>
+                <div class="addresses__list__item">
+                  <b>Wola3:</b>
+                  <p>
+                    ul. Giełdowa 4E, U4<br />
+                    <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                    <b>Вс:</b> 10:00 – 20:00
+                  </p>
+                </div>
+                <div class="addresses__list__item">
+                  <b>Wola4:</b>
+                  <p>
+                    ul. Giełdowa 4E, U4<br />
+                    <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                    <b>Вс:</b> 10:00 – 20:00
+                  </p>
+                </div>
+                <div class="addresses__list__item">
+                  <b>Wola5:</b>
+                  <p>
+                    ul. Giełdowa 4E, U4<br />
+                    <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                    <b>Вс:</b> 10:00 – 20:00
+                  </p>
+                </div>
+                <div class="addresses__list__item">
+                  <b>Wola6:</b>
+                  <p>
+                    ul. Giełdowa 4E, U4<br />
+                    <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                    <b>Вс:</b> 10:00 – 20:00
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="modal__overlay"></div>
+            <div class="addresses__list__pagination">
+              <div class="pagination-prev btn-arr white"></div>
+              <div class="pagination"></div>
+              <div class="pagination-next btn-arr white"></div>
+            </div>
+            <div class="addresses__pictures swiper">
+              <div class="swiper-wrapper">
+                <div class="addresses__pictures__item">
+                  <img src="assets/img/Subtract (5).png" alt="" />
+                </div>
+                <div class="addresses__pictures__item">
+                  <img src="assets/img/Subtract (4).png" alt="" />
+                </div>
+                <div class="addresses__pictures__item">
+                  <img src="assets/img/Subtract (3).png" alt="" />
+                </div>
+                <div class="addresses__pictures__item">
+                  <img src="assets/img/Subtract (2).png" alt="" />
+                </div>
+                <div class="addresses__pictures__item">
+                  <img src="assets/img/Subtract (1).png" alt="" />
+                </div>
+                <div class="addresses__pictures__item">
+                  <img src="assets/img/Subtract.png" alt="" />
+                </div>
+              </div>
+              <div class="corner corner-top-2"></div>
+              <div class="corner corner-bottom-1"></div>
+              <div class="corner corner-bottom-2"></div>
+            </div>
+            <div class="booksy-btn">
+              <a
+                href="https://booksy.com/pl-pl/instant-experiences/widget/5038,12112,110179,87005,77417,36860?instant_experiences_enabled=true&ig_ix=true&fbclid=PAAaaKmVqNGBhzzauwwcR1oQaySQ-UuKn6-XU3ShlVVnCRKCTOwitFNtJwEuU_aem_AdX8ZFKduc8y18Mg2jaikh1ebImzEXYK4VbXEMVEf2KNrvMPtp4T66b4RVJxq82fMSw"
+                target="_blank"
+                class="btn"
+              >
+                <img src="assets/img/booksy.svg" alt="" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="modal contact-modal">
-            <div class="modal__wrap">
-                <div class="close"></div>
-                <div class="image">
-                    <img src="assets/img/popup2.png" alt="" />
+      </section>
+      <section id="contacts-map">
+        <div class="container">
+          <div class="contacts">
+            <div class="contacts__addresses swiper">
+              <div class="swiper-wrapper">
+                <div class="contacts__addresses__item">
+                  <div class="image">
+                    <img src="assets/img/Image (2).png" alt="" />
+                  </div>
+                  <div class="text">
+                    <b>Warszawa, Wola:</b>
+                    <p>
+                      ul. Giełdowa 4E, U4<br />
+                      <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                      <b>Вс:</b> 10:00 – 20:00
+                    </p>
+                  </div>
                 </div>
-                <form class="contacts-form">
-                    <label class="input-wrap">
-                        <span class="label">Имя *</span>
-                        <input type="text" required placeholder="Имя" />
-                    </label>
-                    <label class="input-wrap">
-                        <span class="label">Email *</span>
-                        <input type="email" required />
-                    </label>
-                    <label class="input-wrap phone">
-                        <select class="countryCodes"></select>
-                        <span class="label">Телефон *</span>
-                        <input type="tel" required />
-                    </label>
-                    <label class="input-wrap">
-                        <span class="label">Салон *</span>
-                        <select class="select" name="salon">
-                            <option value="Postępu 27, Warszawa">
-                                Postępu 27, Warszawa
-                            </option>
-                            <option value="Giełdowa 4E, Warszawa">
-                                Giełdowa 4E, Warszawa
-                            </option>
-                            <option value="Al. KEN 36, Warszawa">
-                                Al. KEN 36, Warszawa
-                            </option>
-                            <option value="Herbu Szreniawa 11, Warszawa">
-                                Herbu Szreniawa 11, Warszawa
-                            </option>
-                            <option value="Masarska 8, Kraków">
-                                Masarska 8, Kraków
-                            </option>
-                            <option value="Gwiaździsta 18, Wrocław">
-                                Gwiaździsta 18, Wrocław
-                            </option>
-                        </select>
-                    </label>
-                    <label class="input-wrap">
-                        <span class="label">Сообщение *</span>
-                        <textarea
-                            required
-                            placeholder="Написать сообщение..."
-                        ></textarea>
-                    </label>
-                    <label class="confirmation">
-                        <input type="checkbox" required />
-                        <span class="checkbox"></span>
-                        You agree to our friendly&nbsp;
-                        <a class="link" href="#">privacy policy</a>
-                    </label>
-                    <button class="btn lg">Написать</button>
-                </form>
+                <div class="contacts__addresses__item">
+                  <div class="image">
+                    <img src="assets/img/Image (3).png" alt="" />
+                  </div>
+                  <div class="text">
+                    <b>Warszawa, Mokotów:</b>
+                    <p>
+                      Postępu 27<br />
+                      <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                      <b>Вс:</b> 10:00 – 20:00
+                    </p>
+                  </div>
+                </div>
+                <div class="contacts__addresses__item">
+                  <div class="image">
+                    <img src="assets/img/Image (4).png" alt="" />
+                  </div>
+                  <div class="text">
+                    <b>Warszawa, Ursynów:</b>
+                    <p>
+                      Al.KEN 36, lok. 39<br />
+                      <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                      <b>Вс:</b> 10:00 – 20:00
+                    </p>
+                  </div>
+                </div>
+                <div class="contacts__addresses__item">
+                  <div class="image">
+                    <img src="assets/img/Image (5).png" alt="" />
+                  </div>
+                  <div class="text">
+                    <b>Warszawa, Wilanów:</b>
+                    <p>
+                      Herbu Szreniawa 11, lok. 1<br />
+                      <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                      <b>Вс:</b> 10:00 – 20:00
+                    </p>
+                  </div>
+                </div>
+                <div class="contacts__addresses__item">
+                  <div class="image">
+                    <img src="assets/img/Image (6).png" alt="" />
+                  </div>
+                  <div class="text">
+                    <b>Kraków, Śródmieście:</b>
+                    <p>
+                      Masarska 8, lok.103<br />
+                      <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                      <b>Вс:</b> 10:00 – 20:00
+                    </p>
+                  </div>
+                </div>
+                <div class="contacts__addresses__item">
+                  <div class="image">
+                    <img src="assets/img/Image (7).png" alt="" />
+                  </div>
+                  <div class="text">
+                    <b>Wrocław, Krzyki:</b>
+                    <p>
+                      Gwiaździsta 18, lok.7<br />
+                      <b>Пн-Сб:</b> 08:00 – 21:00<br />
+                      <b>Вс:</b> 10:00 – 20:00
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__addresses__scrollbar"></div>
             </div>
-            <div class="modal__overlay"></div>
+            <div class="contacts__map"></div>
+          </div>
         </div>
-        <div class="overlay"></div>
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5J6Hp2zCjlvWGNN5tv708y8DyXgb4Gc"
-            async=""
-            defer=""
-        ></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script> -->
-        <script src="https://unpkg.com/imask"></script>
-        <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
-        <script type="module" src="assets/js/scripts.js"></script>
-        <!-- <script
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="left">
+          <div class="row">
+            <a href="/" class="logo"
+              ><img src="assets/img/logo.svg" alt=""
+            /></a>
+          </div>
+          <div class="menu">
+            <div class="title">Меню:</div>
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">О нас</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu">
+            <div class="title">Услуги:</div>
+            <ul>
+              <li>
+                <a href="#">Лазерная эпиляция</a>
+              </li>
+              <li>
+                <a href="#">Электроэпиляция</a>
+              </li>
+              <li>
+                <a href="#">Шугаринг</a>
+              </li>
+              <li class="mobile">
+                <a href="#">Восковая депиляция</a>
+              </li>
+              <li class="mobile">
+                <a href="#">Мужская депиляция</a>
+              </li>
+              <li class="mobile">
+                <a href="#">Массаж ICOONE</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu no-mobile">
+            <div class="title">&nbsp;</div>
+            <ul>
+              <li>
+                <a href="#">Восковая депиляция</a>
+              </li>
+              <li>
+                <a href="#">Мужская депиляция</a>
+              </li>
+              <li>
+                <a href="#">Массаж ICOONE</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu contacts">
+            <div class="title">Контакты:</div>
+            <ul>
+              <li>
+                <a href="tel:+48730162614" target="_blank">
+                  <img src="assets/img/Phone.svg" alt="" />
+                  +48 730 162 614</a
+                >
+              </li>
+              <li>
+                <a href="mailto:admin@babalab.pl" target="_blank">
+                  <img src="assets/img/Envelope.svg" alt="" />
+                  admin@babalab.pl</a
+                >
+              </li>
+              <li>
+                <a href="https://instagram.com/babalab.pl" target="_blank">
+                  <img src="assets/img/InstagramLogo.svg" alt="" />
+                  babalab.pl
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="image">
+            <img src="assets/img/circle-photo.png" alt="" />
+          </div>
+          <div class="name">Екатерина</div>
+          <p>основательница babalab</p>
+          <div class="o-btn contact-me-btn">Напиши мне</div>
+        </div>
+        <div class="bottom">
+          <ul>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Договор оферты</a></li>
+            <li><a href="#">babalab.pl</a></li>
+            <li>All rights reserved © 2024</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="modal contact-me">
+      <div class="modal__wrap">
+        <div class="close"></div>
+        <div class="image">
+          <!-- <img src="assets/img/s.png" alt="" /> -->
+          <picture>
+            <source
+              srcset="assets/img/contact-me-mobile.png"
+              media="(max-width: 768px)"
+            />
+            <img src="assets/img/contact-me.png" alt="" />
+          </picture>
+        </div>
+        <form class="contacts-form">
+          <label class="input-wrap">
+            <span class="label">Имя *</span>
+            <input type="text" required placeholder="Имя" />
+          </label>
+          <label class="input-wrap">
+            <span class="label">Email *</span>
+            <input type="email" required />
+          </label>
+          <label class="input-wrap phone">
+            <select class="countryCodes"></select>
+            <span class="label">Телефон *</span>
+            <input type="tel" required />
+          </label>
+          <label class="input-wrap">
+            <span class="label">Салон *</span>
+            <select class="select" name="salon">
+              <option value="Postępu 27, Warszawa">Postępu 27, Warszawa</option>
+              <option value="Giełdowa 4E, Warszawa">
+                Giełdowa 4E, Warszawa
+              </option>
+              <option value="Al. KEN 36, Warszawa">Al. KEN 36, Warszawa</option>
+              <option value="Herbu Szreniawa 11, Warszawa">
+                Herbu Szreniawa 11, Warszawa
+              </option>
+              <option value="Masarska 8, Kraków">Masarska 8, Kraków</option>
+              <option value="Gwiaździsta 18, Wrocław">
+                Gwiaździsta 18, Wrocław
+              </option>
+            </select>
+          </label>
+          <label class="input-wrap">
+            <span class="label">Сообщение *</span>
+            <textarea required placeholder="Написать сообщение..."></textarea>
+          </label>
+          <label class="confirmation">
+            <input type="checkbox" required />
+            <span class="checkbox"></span>
+            You agree to our friendly&nbsp;
+            <a class="link" href="#">privacy policy</a>
+          </label>
+          <button class="btn lg">Написать</button>
+        </form>
+      </div>
+      <div class="modal__overlay"></div>
+    </div>
+    <div class="modal contact-modal">
+      <div class="modal__wrap">
+        <div class="close"></div>
+        <div class="image">
+          <img src="assets/img/popup2.png" alt="" />
+        </div>
+        <form class="contacts-form">
+          <label class="input-wrap">
+            <span class="label">Имя *</span>
+            <input type="text" required placeholder="Имя" />
+          </label>
+          <label class="input-wrap">
+            <span class="label">Email *</span>
+            <input type="email" required />
+          </label>
+          <label class="input-wrap phone">
+            <select class="countryCodes"></select>
+            <span class="label">Телефон *</span>
+            <input type="tel" required />
+          </label>
+          <label class="input-wrap">
+            <span class="label">Салон *</span>
+            <select class="select" name="salon">
+              <option value="Postępu 27, Warszawa">Postępu 27, Warszawa</option>
+              <option value="Giełdowa 4E, Warszawa">
+                Giełdowa 4E, Warszawa
+              </option>
+              <option value="Al. KEN 36, Warszawa">Al. KEN 36, Warszawa</option>
+              <option value="Herbu Szreniawa 11, Warszawa">
+                Herbu Szreniawa 11, Warszawa
+              </option>
+              <option value="Masarska 8, Kraków">Masarska 8, Kraków</option>
+              <option value="Gwiaździsta 18, Wrocław">
+                Gwiaździsta 18, Wrocław
+              </option>
+            </select>
+          </label>
+          <label class="input-wrap">
+            <span class="label">Сообщение *</span>
+            <textarea required placeholder="Написать сообщение..."></textarea>
+          </label>
+          <label class="confirmation">
+            <input type="checkbox" required />
+            <span class="checkbox"></span>
+            You agree to our friendly&nbsp;
+            <a class="link" href="#">privacy policy</a>
+          </label>
+          <button class="btn lg">Написать</button>
+        </form>
+      </div>
+      <div class="modal__overlay"></div>
+    </div>
+    <div class="overlay"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5J6Hp2zCjlvWGNN5tv708y8DyXgb4Gc"
+      async=""
+      defer=""
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script> -->
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+    <script type="module" src="assets/js/scripts.js"></script>
+    <!-- <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD57b1klhTcVUYoGhkOf2h1ck2SKmTvNSQ&callback=initMap"
             async=""
             defer=""
         ></script> -->
-    </body>
+  </body>
 </html>
