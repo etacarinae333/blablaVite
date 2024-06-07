@@ -7,9 +7,9 @@
     }
   ],
   "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/about-us", "dest": "/about-us.html" },
-    { "src": "/contact", "dest": "/contact.html" },
-    { "src": "/404", "dest": "/404.html" }
+    { "src": "/", "dest": "/dist/index.html" },
+    { "src": "/about-us", "dest": "/dist/about-us.html" },
+    { "src": "/contact", "dest": "/dist/contact.html" },
+    { "src": "/404", "dest": "/dist/404.html" }
   ]
 }
