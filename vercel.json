@@ -1,5 +1,4 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "version": 2,
   "builds": [
     {
@@ -10,7 +9,6 @@
   "routes": [
     { "src": "/", "dest": "/dist/index.html" },
     { "src": "/about-us", "dest": "/dist/about-us.html" },
-    { "src": "/contact", "dest": "/dist/contact.html" },
-    { "src": "/404", "dest": "/dist/404.html" }
+    { "src": "/contact", "dest": "/dist/contact.html" }
   ]
 }
