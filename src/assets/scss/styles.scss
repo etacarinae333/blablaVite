@@ -235,9 +235,6 @@ body {
       transition: 0.4s;
       visibility: hidden;
       transform: translateX(100%);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       background-color: #fff;
       padding: 16px;
       padding-top: 62px;
@@ -245,12 +242,21 @@ body {
       top: 0;
       right: -1px;
       height: calc(100vh / var(--zoom));
-      overflow-y: auto;
+      &__wrapper {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow-y: auto;
+      }
     }
     &__menu {
+      order: 1;
+      width: 100%;
       > ul {
         flex-direction: column;
         > li {
+          align-items: flex-start;
           flex-direction: column;
           &.with-dropdown {
             margin-top: 24px;
@@ -291,9 +297,10 @@ body {
       }
     }
     .lang {
-      margin: 40px 0;
+      margin: 0;
     }
     .btn {
+      order: 2;
       margin-top: auto;
       width: 100%;
     }
