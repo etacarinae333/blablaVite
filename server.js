@@ -22,9 +22,9 @@ app.get("/contacts", function (_, res) {
 app.get("/about-us", function (_, res) {
   res.sendFile("dist/about-us.html", { root: __dirname });
 });
-app.get("/404", function (_, res) {
-  res.sendFile("dist/404.html", { root: __dirname });
-});
+// app.get("/404", function (_, res) {
+//   res.sendFile("dist/404.html", { root: __dirname });
+// });
 
 app.get("/", function (_, res) {
   res.sendFile("dist/index.html", { root: __dirname });
