@@ -26,6 +26,6 @@ app.get("/404", function (_, res) {
   res.sendFile("dist/404.html", { root: __dirname });
 });
 
-app.get("*", function (_, res) {
+app.get("/", function (_, res) {
   res.sendFile("dist/index.html", { root: __dirname });
 });
