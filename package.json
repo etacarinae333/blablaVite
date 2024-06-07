@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npm run build && node server.js",
+    "start": "npm run build",
+    "startlocal": "npm run build && node server.js",
     "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview"
