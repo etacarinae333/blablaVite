@@ -1,1 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+
+@font-face {
+  font-family: "CGP";
+  font-style: normal;
+  font-weight: 100;
+  src: local("CenturyGothicPaneuropeanThin"),
+    url("../fonts/CenturyGothicPaneuropeanThin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CGP";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/CenturyGothicPaneuropeanLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CGP";
+  font-style: normal;
+  font-weight: 400;
+  src: local("CenturyGothicPaneuropeanRegular"),
+    url("../fonts/CenturyGothicPaneuropeanRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CGP";
+  font-style: normal;
+  font-weight: 600;
+  src: local("CenturyGothicPaneuropeanSemiBold"),
+    url("../fonts/CenturyGothicPaneuropeanSemiBold.ttf") format("truetype");
+}

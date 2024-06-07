@@ -79,7 +79,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="homepage">
       <section id="main">
         <div class="container">
           <div class="main-banner swiper">
@@ -489,47 +489,48 @@
       </section>
       <section id="contacts">
         <div class="container">
-          <div class="contacts-info">
-            <h2>Вы всегда можете связаться с нами</h2>
-            <div class="desc">
-              чтобы уточнить информацию о работе салона,<br />
-              записаться на услугу или получить дополнительные<br />
-              консультации
+          <div class="box">
+            <div class="contacts-info">
+              <h2>Вы всегда можете связаться с нами</h2>
+              <div class="desc">
+                чтобы уточнить информацию о работе салона,<br />
+                записаться на услугу или получить дополнительные<br />
+                консультации
+              </div>
+              <ul class="contacts">
+                <li class="contacts__item">
+                  <b>телефон:</b>
+                  <a href="tel:+48730162614" target="_blank">+48 730 162 614</a>
+                </li>
+                <li class="contacts__item">
+                  <b>email:</b>
+                  <a href="mailto:admin@babalab.pl" target="_blank"
+                    >admin@babalab.pl</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <b>instagram:</b>
+                  <a href="https://instagram.com/babalab.pl" target="_blank"
+                    >@babalab.pl</a
+                  >
+                </li>
+              </ul>
             </div>
-            <ul class="contacts">
-              <li class="contacts__item">
-                <b>телефон:</b>
-                <a href="tel:+48730162614" target="_blank">+48 730 162 614</a>
-              </li>
-              <li class="contacts__item">
-                <b>email:</b>
-                <a href="mailto:admin@babalab.pl" target="_blank"
-                  >admin@babalab.pl</a
-                >
-              </li>
-              <li class="contacts__item">
-                <b>instagram:</b>
-                <a href="https://instagram.com/babalab.pl" target="_blank"
-                  >@babalab.pl</a
-                >
-              </li>
-            </ul>
-          </div>
-          <form class="contacts-form">
-            <label class="input-wrap">
-              <span class="label">Имя *</span>
-              <input type="text" required placeholder="Имя" />
-            </label>
-            <label class="input-wrap">
-              <span class="label">Email *</span>
-              <input type="email" required />
-            </label>
-            <label class="input-wrap phone">
-              <select class="countryCodes"></select>
-              <span class="label">Телефон *</span>
-              <input type="tel" required />
-            </label>
-            <!-- <label class="input-wrap select-wrap">
+            <form class="contacts-form">
+              <label class="input-wrap">
+                <span class="label">Имя *</span>
+                <input type="text" required placeholder="Имя" />
+              </label>
+              <label class="input-wrap">
+                <span class="label">Email *</span>
+                <input type="email" required />
+              </label>
+              <label class="input-wrap phone">
+                <select class="countryCodes"></select>
+                <span class="label">Телефон *</span>
+                <input type="tel" required />
+              </label>
+              <!-- <label class="input-wrap select-wrap">
               <span class="label">Город *</span>
               <select class="select" name="city" placeholder="Выбрать город">
                 <option value="Варшава">Варшава</option>
@@ -551,17 +552,21 @@
                 <option value="Массаж ICOONE">Массаж ICOONE</option>
               </select>
             </label> -->
-            <label class="input-wrap">
-              <span class="label">Сообщение *</span>
-              <textarea required placeholder="Написать сообщение..."></textarea>
-            </label>
-            <label class="confirmation">
-              <input type="checkbox" required />
-              <span class="checkbox"></span>You agree to our friendly&nbsp;
-              <a class="link" href="#">privacy policy</a>
-            </label>
-            <button class="btn lg">Написать</button>
-          </form>
+              <label class="input-wrap">
+                <span class="label">Сообщение *</span>
+                <textarea
+                  required
+                  placeholder="Написать сообщение..."
+                ></textarea>
+              </label>
+              <label class="confirmation">
+                <input type="checkbox" required />
+                <span class="checkbox"></span>You agree to our friendly&nbsp;
+                <a class="link" href="#">privacy policy</a>
+              </label>
+              <button class="btn lg">Написать</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
