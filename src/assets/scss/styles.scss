@@ -31,9 +31,12 @@ body {
     align-items: center;
   }
   &__main {
-    display: flex;
-    align-items: center;
     flex-grow: 1;
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
   }
   &__logo {
     margin-right: 110px;
@@ -245,6 +248,7 @@ body {
       &__wrapper {
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: flex-start;
         overflow-y: auto;
